@@ -1,0 +1,29 @@
+Package: pleiotest
+Type: Package
+Title: Testing of Simulated Pleiotropic Genotypes and Phenotypes
+Version: 0.1.0
+Authors@R: 
+    person("Wanjun", "Gu", ,email = "wanjun.gu@ucsf.edu", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0002-7342-7000"))
+Description: The `pleiotest` package provides a comprehensive framework for evaluating pleiotropy in simulated genetic data. It includes multiple statistical methods for testing the association of genetic variants with multiple correlated traits, using a range of model-based and data-driven approaches. The package supports various pleiotropy tests, including `MixFisher`, `MixVar`, `MixTippett`, `MixSD`, `PCMinP`, and `PCLC`, among others. These methods leverage summary statistics from GWAS-like studies and account for the correlation structure among traits. The package integrates with `pleiosim` to simulate pleiotropic genotypes and phenotypes, making it a valuable tool for benchmarking pleiotropy detection methods. `pleiotest` is particularly useful for researchers studying the genetic basis of complex traits and diseases.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    BiocManager,
+    devtools,
+    dplyr,
+    metaCCA,
+    MPAT,
+    MTARclone,
+    mvtnorm,
+    pleiosim,
+    purrr,
+    tibble
+Remotes:
+    Broccolito/MPATclone,
+    Broccolito/MTARclone,
+    Broccolito/pleiosim
+Depends: 
+    R (>= 3.5)
+RoxygenNote: 7.3.2
