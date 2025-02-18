@@ -23,7 +23,7 @@ To install the development version of `pleiotest` from GitHub, you will need **`
 install.packages("devtools")
 
 # Install pleiotest from GitHub
-devtools::install_github("your-github-username/pleiotest")
+devtools::install_github("Broccolito/pleiotest")
 ```
 
 ### Dependencies

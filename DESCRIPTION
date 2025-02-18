@@ -10,14 +10,12 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
+    devtools
     BiocManager,
     devtools,
     dplyr,
     metaCCA,
-    MPAT,
-    MTARclone,
     mvtnorm,
-    pleiosim,
     purrr,
     tibble
 Remotes:
@@ -26,4 +24,9 @@ Remotes:
     Broccolito/pleiosim
 Depends: 
     R (>= 3.5)
+Suggests:
+    metaCCA,
+    pleiosim,
+    MPAT,
+    MTARclone
 RoxygenNote: 7.3.2
