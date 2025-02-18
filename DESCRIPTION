@@ -9,24 +9,18 @@ Description: The `pleiotest` package provides a comprehensive framework for eval
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    devtools
+Suggests: 
     BiocManager,
     devtools,
     dplyr,
     metaCCA,
     mvtnorm,
     purrr,
-    tibble
-Remotes:
-    Broccolito/MPATclone,
-    Broccolito/MTARclone,
-    Broccolito/pleiosim
-Depends: 
-    R (>= 3.5)
-Suggests:
+    tibble,
     metaCCA,
     pleiosim,
     MPAT,
     MTARclone
+Depends: 
+    R (>= 3.5)
 RoxygenNote: 7.3.2
