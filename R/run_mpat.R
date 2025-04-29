@@ -762,6 +762,24 @@ run_pco = function(pleio){
   return(pleio_p)
 }
 
+#' Run PCAQ Pleiotropy Test
+#'
+#' Applies the `PCAQ` method from the `MPAT` package to assess pleiotropy using estimated correlation structure.
+#'
+#' @param pleio An object of class `pleio`, containing summary statistics (effect sizes and standard errors) for genetic variants across multiple phenotypes.
+#'
+#' @details
+#' The `PCAQ` (Principal Component Adaptive Quadratic) method combines z-scores across multiple correlated traits using a principal component-based quadratic form.
+#' The function extracts effect size (`beta`) and standard error (`SE`) matrices from the `pleio` object, computes z-scores, and estimates their correlation matrix.
+#' It then uses the `SigmaXEstimate()` function to simulate the null distribution of the test statistic and applies the `PCAQ` method to compute p-values for each variant.
+#'
+#' @return A `data.frame` with `PCAQ`-based p-values for each variant.
+#' The row names correspond to variant identifiers.
+#'
+#' @examples
+#' result <- run_pcaq(pleio)
+#' head(result)
+#'
 #' @export
 run_pcaq = function(pleio){
 
