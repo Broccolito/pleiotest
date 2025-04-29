@@ -163,6 +163,16 @@ pleiotest = function(pleio_object,
     execution_time["mixada"] = time_taken
   }
 
+  if(run_mixfisher_davies_test){
+    message("Running mixfisher_davies test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_mixfisher_davies(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["mixfisher_davies"] = time_taken
+  }
+
   if(run_mixfisher_liu_test){
     message("Running mixfisher_liu test...\n")
     start_time = Sys.time()
@@ -271,6 +281,106 @@ pleiotest = function(pleio_object,
     end_time = Sys.time()
     time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
     execution_time["mixvar_liumod"] = time_taken
+  }
+
+  if(run_pcaq_test){
+    message("Running pcaq test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_pcaq(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["pcaq"] = time_taken
+  }
+
+  if(run_pcfisher_test){
+    message("Running pcfisher test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_pcfisher(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["pcfisher"] = time_taken
+  }
+
+  if(run_pclc_test){
+    message("Running pclc test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_pclc(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["pclc"] = time_taken
+  }
+
+  if(run_pcminp_test){
+    message("Running pcminp test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_pcminp(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["pcminp"] = time_taken
+  }
+
+  if(run_pco_test){
+    message("Running pco test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_pco(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["pco"] = time_taken
+  }
+
+  if(run_sum_test){
+    message("Running sum test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_sum(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["sum"] = time_taken
+  }
+
+  if(run_tates_test){
+    message("Running tates test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_tates(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["tates"] = time_taken
+  }
+
+  if(run_vc_test){
+    message("Running vc test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_vc(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["vc"] = time_taken
+  }
+
+  if(run_wald_test){
+    message("Running wald test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_wald(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["wald"] = time_taken
+  }
+
+  if(run_wi_test){
+    message("Running wi test...\n")
+    start_time = Sys.time()
+    pleioanalyze_result = cbind.data.frame(pleioanalyze_result,
+                                           run_wi(pleio_object))
+    end_time = Sys.time()
+    time_taken = as.numeric(difftime(end_time, start_time, units = "secs"))
+    execution_time["wi"] = time_taken
   }
 
   rownames(pleioanalyze_result) = NULL
