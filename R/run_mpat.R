@@ -656,7 +656,7 @@ run_vc = function(pleio){
 
   pleio_p = apply(zscore_matrix, MARGIN = 1, MPAT::VC, Sigma = zscore_sigma)
 
-  pleio_p = data.frame(pleio_p = pleio_p)
+  pleio_p = data.frame(vc_p = pleio_p)
   rownames(pleio_p) = rownames(zscore_matrix)
 
   return(pleio_p)
@@ -688,7 +688,7 @@ run_wald = function(pleio){
 
   pleio_p = apply(zscore_matrix, MARGIN = 1, MPAT::Wald, Sigma = zscore_sigma)
 
-  pleio_p = data.frame(pleio_p = pleio_p)
+  pleio_p = data.frame(wald_p = pleio_p)
   rownames(pleio_p) = rownames(zscore_matrix)
 
   return(pleio_p)
@@ -722,7 +722,7 @@ run_wi = function(pleio){
 
   pleio_p = apply(zscore_matrix, MARGIN = 1, MPAT::WI, Sigma = zscore_sigma)
 
-  pleio_p = data.frame(pleio_p = pleio_p)
+  pleio_p = data.frame(wi_p = pleio_p)
   rownames(pleio_p) = rownames(zscore_matrix)
 
   return(pleio_p)
